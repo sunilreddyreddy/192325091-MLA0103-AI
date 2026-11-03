@@ -1,0 +1,25 @@
+
+print("DIET RECOMMENDATION SYSTEM")
+
+age = int(input("Enter your age: "))
+weight = float(input("Enter your weight in kg: "))
+activity = input("Enter activity level (low/medium/high): ").lower()
+
+print("\nDiet Recommendation:")
+
+if age < 18:
+    print("Eat a balanced diet with fruits, vegetables and protein.")
+
+elif activity == "low":
+    print("Include vegetables, fruits and whole grains.")
+    print("Avoid excessive sugary and oily foods.")
+
+elif activity == "medium":
+    print("Include rice, vegetables, fruits, milk and protein foods.")
+
+elif activity == "high":
+    print("Include whole grains, fruits and protein-rich foods.")
+    print("Drink enough water.")
+
+else:
+    print("Please enter a valid activity level.")
