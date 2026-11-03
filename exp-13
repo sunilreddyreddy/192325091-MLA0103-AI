@@ -1,0 +1,29 @@
+
+from sklearn.neural_network import MLPClassifier
+# Training data: [Study Hours, Attendance]
+X = [
+    [2, 50],
+    [3, 60],
+    [5, 75],
+    [6, 80],
+    [8, 90],
+    [9, 95]
+]
+# 0 = Fail, 1 = Pass
+y = [0, 0, 0, 1, 1, 1]
+# Create and train ANN model
+model = MLPClassifier(
+    hidden_layer_sizes=(5,),
+    max_iter=2000,
+    random_state=1
+)
+model.fit(X, y)
+# Get student details
+hours = float(input("Enter Study Hours: "))
+attendance = float(input("Enter Attendance: "))
+# Predict result
+prediction = model.predict([[hours, attendance]])
+if prediction[0] == 1:
+    print("Prediction: Pass")
+else:
+    print("Prediction: Fail")
