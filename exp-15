@@ -1,0 +1,26 @@
+
+# Knowledge Base
+father = {
+    "John": "David",
+    "Mary": "Robert",
+    "David": "Peter"
+}
+
+mother = {
+    "John": "Susan",
+    "Mary": "Linda",
+    "David": "Helen"
+}
+
+# Display family relationships
+print("FAMILY KNOWLEDGE BASE")
+
+for child in father:
+    print(child, "is the child of", father[child],
+          "and", mother[child])
+
+# Find the father of John
+print("\nFather of John:", father["John"])
+
+# Find the mother of Mary
+print("Mother of Mary:", mother["Mary"])
